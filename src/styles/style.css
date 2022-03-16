@@ -1,0 +1,54 @@
+/* header font */
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.flex-between {
+  justify-content: space-between;
+}
+
+@layer components {
+  .card {
+    border-radius: theme("borderRadius.lg");
+    padding: theme("spacing.6");
+    box-shadow: theme("boxShadow.md");
+    color: theme("colors.white");
+    cursor: theme("cursor.pointer");
+    transition: ease-in-out 0.16s;
+  }
+
+  .card--info {
+    @apply card;
+    background-color: theme("colors.sky.500");
+  }
+
+  .card--success {
+    @apply card;
+    background-color: theme("colors.emerald.500");
+  }
+
+  .card--warning {
+    @apply card;
+    background-color: theme("colors.orange.500");
+  }
+
+  .card--danger {
+    @apply card;
+    background-color: theme("colors.red.500");
+  }
+
+  .card--white {
+    @apply card text-black;
+    background-color: theme("colors.white");
+  }
+
+  .card__title {
+    @apply text-xl font-semibold font-heading;
+  }
+
+  .card__text {
+    @apply font-heading;
+  }
+}
