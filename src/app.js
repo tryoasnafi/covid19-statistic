@@ -1,4 +1,5 @@
-import main from "./scripts/views/main.js"
+import 'regenerator-runtime'
+import './styles/style.css'
+import main from './scripts/views/main.js'
 
-
-document.addEventListener("DOMContentLoaded", main)
+document.addEventListener('DOMContentLoaded', main)
