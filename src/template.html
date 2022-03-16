@@ -5,9 +5,87 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>COVID 19 Statistics - Provinsi</title>
-    <link rel="shortcut icon" href="" type="image/x-icon" />
   </head>
   <body>
-    <script src="./app.js" type="module"></script>
+    <header class="bg-white shadow-md sticky top-0">
+      <nav
+        class="max-w-7xl px-4 mx-auto text-center py-5 flex flex-col md:flex-row space-y-3 md:space-y-0 flex-between"
+      >
+        <h1 class="text-xl font-semibold font-heading">
+          Statistik Harian COVID-19 di Indonesia
+        </h1>
+        <section class="space-x-2">
+          <a
+            href="#"
+            class="py-2 px-4 bg-violet-500 hover:bg-violet-700 rounded-md text-white transition ease-in-out delay-150"
+            >Kumulatif
+          </a>
+          <a
+            href="#statistikProvinsi"
+            class="py-2 px-4 bg-cyan-500 hover:bg-cyan-700 rounded-md text-white transition ease-in-out delay-150"
+            >Provinsi
+          </a>
+        </section>
+      </nav>
+    </header>
+    <main class="bg-gray-100 py-8">
+      <section class="max-w-7xl px-4 mx-auto" id="statistikKumulatif">
+        <header class="py-4">
+          <h2 class="text-2xl font-semibold">Statistik Kumulatif</h2>
+          <p class="text-gray-6 00 py-2">
+            Diperbarui:
+            <span
+              class="text-xs rounded-md bg-violet-500 text-white font-semibold py-1 px-2"
+              id="kumulatifLastUpdate"
+              >Tanggal</span
+            >
+          </p>
+        </header>
+        <div class="grid md:grid-cols-4 sm:grid-cols-3 gap-4 text-center">
+          <section class="card--warning hover:bg-orange-600">
+            <h5 class="card__title" id="kumulatifPositif"></h5>
+            <p>Positif</p>
+          </section>
+          <section class="card--success hover:bg-emerald-600">
+            <h5 class="card__title" id="kumulatifSembuh"></h5>
+            <p>Sembuh</p>
+          </section>
+          <section class="card--info hover:bg-sky-600">
+            <h5 class="card__title" id="kumulatifDirawat"></h5>
+            <p>Dirawat</p>
+          </section>
+          <section class="card--danger hover:bg-red-600">
+            <h5 class="card__title" id="kumulatifMeninggal"></h5>
+            <p>Meninggal Dunia</p>
+          </section>
+        </div>
+      </section>
+      <section class="max-w-7xl px-4 mx-auto pt-16" id="statistikProvinsi">
+        <header class="py-4">
+          <h2 class="text-2xl font-semibold">Statistik Provinsi Hari Ini</h2>
+          <p class="text-gray-600 py-2">
+            Diperbarui:
+            <span
+              class="text-xs rounded-md bg-cyan-500 text-white font-semibold py-1 px-2"
+              id="provinsiLastUpdate"
+              >Tanggal
+            </span>
+          </p>
+        </header>
+        <statistic-list
+          class="grid md:grid-cols-4 sm:grid-cols-3 gap-4"
+        ></statistic-list>
+      </section>
+    </main>
+    <footer class="bg-cyan-500 py-2">
+      <p class="copyright text-center text-white font-semibold">
+        &copy;
+        <script>
+          document.write(
+            `${new Date().getFullYear()} Tryo Asnafi. All right reserved`
+          );
+        </script>
+      </p>
+    </footer>
   </body>
 </html>
