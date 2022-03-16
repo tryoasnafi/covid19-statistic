@@ -18,7 +18,7 @@ class StatisticList extends HTMLElement {
       statItemEl.statistic = stat
       this.appendChild(statItemEl)
     })
-    console.log(getDate())
+
     document.getElementById('provinsiLastUpdate').innerHTML = getDate()
   }
 }
