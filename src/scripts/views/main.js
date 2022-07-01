@@ -30,10 +30,6 @@ const main = () => {
     statListEl.statistics = results
   }
 
-  // const fallbackResult = (message) => {
-  //   statListEl.renderError(message)
-  // };
-
   provinceStatistic()
   todayStatistic()
 }
